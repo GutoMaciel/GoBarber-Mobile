@@ -1,6 +1,6 @@
 import React from 'react';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
-// import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createStackNavigator } from 'react-navigation-stack';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -23,7 +23,7 @@ export default (isSigned = false) =>
           SignIn,
           SignUp,
         }),
-        App: createSwitchNavigator(
+        App: createBottomTabNavigator(
           {
             Dashboard,
             New: {
@@ -45,7 +45,7 @@ export default (isSigned = false) =>
               ),
               navigationOptions: {
                 tabBarVisible: false,
-                tabBarLabel: 'Agendar',
+                tabBarLabel: 'New',
                 tabBarIcon: (
                   <Icon
                     name="add-circle-outline"
@@ -58,6 +58,7 @@ export default (isSigned = false) =>
             Profile,
           },
           {
+            resetOnBlur: true,
             tabBarOptions: {
               keyboardHidesTabBar: true,
               activeTintColor: '#FFF',

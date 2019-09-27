@@ -26,7 +26,7 @@ export default function SelectProvider({ navigation }) {
       <Container>
         <ProvidersList
           data={providers}
-          keyExtractor={provider => String(provider.ProvidersList)}
+          keyExtractor={provider => String(provider.id)}
           renderItem={({ item: provider }) => (
             <Provider
               onPress={() =>
@@ -50,7 +50,7 @@ export default function SelectProvider({ navigation }) {
 }
 
 SelectProvider.navigationOptions = ({ navigation }) => ({
-  title: 'Selecione o prestador',
+  title: 'Select the artist',
   headerLeft: () => (
     <TouchableOpacity
       onPress={() => {

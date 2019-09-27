@@ -21,21 +21,12 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    'prettier',
-    'jsx-a11y',
-    'import',
-    'react-hooks'
-  ],
+  plugins: ["react", "jsx-a11y", "import", "react-hooks", "prettier"],
+
   rules: {
     'prettier/prettier': 'error',
-    'react/jsx-filename-extension': [
-      'warn',
-      {
-        extensions: ['.js', '.jsx']
-      }
-    ],
+    "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
+
     'import/prefer-default-export': 'off',
     "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
     "react/jsx-one-expression-per-line": "off",

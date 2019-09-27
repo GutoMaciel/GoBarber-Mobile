@@ -7,7 +7,7 @@ import { Container, TInput } from './styles';
 function Input({ style, icon, ...rest }, ref) {
   return (
     <Container style={style}>
-      {icon && <Icon name={icon} size={20} color="rbga(255, 255, 255, 0.6)" />}
+      {icon && <Icon name={icon} size={20} color="#fff" />}
       <TInput {...rest} ref={ref} />
     </Container>
   );
